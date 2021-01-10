@@ -1,0 +1,400 @@
+/* -----------------------------Basic Layout----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background: rgb(235, 235, 245);
+  color: rgb(33, 33, 33);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.panel {
+  width: 100%;
+  min-height: 200px;
+  margin: 5px auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(190, 190, 190);
+  background: rgb(245, 245, 255);
+  border-radius: 10px;
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+/* .transparent {
+  visibility: hidden;
+  opacity: 0;
+} */
+
+.panel__form {
+  width: 40%;
+}
+
+.form {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+
+}
+
+.form__inputs {
+  width: 100%;
+}
+
+.form__input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.form__validation-tip {
+  position: absolute;
+  display: block;
+  padding: 2px 10px;
+  height: 20px;
+  right: 5px;
+  bottom: 0;
+  transform: translateY(20%);
+  background: rgb(245, 245, 255);
+  /* background: rgba(245, 245, 255, 0.7); */
+  color: rgb(206, 86, 86);
+  border: 1px solid rgb(206, 86, 86);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1;
+  font-size: 12px;
+  z-index: 2;
+}
+
+.form__input {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  margin: 4px 0;
+  padding: 0 10px;
+  background: rgb(245, 245, 255);
+  border-radius: 10px;
+  border: 1px solid rgb(190, 190, 190);
+  font-size: 18px;
+  color: rgb(95, 95, 95);
+}
+
+.form__input::placeholder {
+  color: rgb(165, 165, 165);
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 0 6px 2px hsl(240, 20%, 80%);
+}
+
+.form__input:focus ~ .form__validation-tip,
+.form__input:hover ~ .form__validation-tip {
+  display: none;
+}
+
+.form__input_date {
+  position: relative;
+}
+
+.form__input-wrap_date {
+  cursor: text;
+}
+
+.form__input-wrap_date:hover .form__date-placeholder {
+  display: none;
+}
+
+.form__date-placeholder {
+  position: absolute;
+  width: 95%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  color: rgb(165, 165, 165);
+  background: rgb(245, 245, 255);
+  border-radius: 10px;
+}
+
+
+
+.form__submit-wrap {
+  width: 100%;
+}
+
+.form__submit {
+  display: block;
+  width: 50%;
+  min-width: 125px;
+  text-align: center;
+  cursor: pointer;
+  margin: 4px auto;
+  padding: 5px 0;
+  background: rgb(86, 86, 175);
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+  line-height: 1;
+  color: white;
+  font-weight: 300;
+}
+
+.form__submit:focus {
+  outline: none;
+  box-shadow: 0 0 6px 2px rgb(86, 86, 175);
+}
+
+.panel__filters {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.panel__filter-wrap {
+  flex: 1 1 10%;
+}
+
+.panel__filter-wrap_name {
+  flex: 1 1 20%;
+}
+
+.panel__filter-wrap_faculty {
+  flex: 1 1 40%;
+}
+
+.panel__filter-wrap:not(:last-child) {
+  margin-right: 4px;
+}
+
+.panel__filter {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  padding: 0 10px;
+  background: rgb(245, 245, 255);
+  border-radius: 10px;
+  border: 1px solid rgb(190, 190, 190);
+  font-size: 18px;
+  color: rgb(80, 80, 80);
+
+}
+
+.panel__filter::placeholder {
+  color: rgb(165, 165, 165);
+}
+
+.panel__filter:focus {
+  outline: none;
+  box-shadow: 0 0 6px 2px hsl(240, 20%, 80%);
+}
+
+.panel__table-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.panel__table {
+  width: 100%;
+}
+
+.table__head {
+
+
+}
+
+.table__row {
+
+}
+
+.table__row_body:nth-child(even) {
+  background: hsl(240, 20%, 80%);
+}
+
+.panel__sort {
+  flex: 1 1 15%;
+  text-align: center;
+  cursor: pointer;
+  margin: 4px auto;
+  padding: 10px 0;
+  background: hsl(240, 20%, 50%);
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 1;
+  color: white;
+  font-weight: 300;
+}
+
+.panel__sort:focus {
+  outline: none;
+  box-shadow: 0 0 6px 2px hsl(240, 20%, 50%);
+}
+
+.table__col_body {
+  position: relative;
+  padding: 4px;
+  text-align: center;
+  font-size: 18px;
+  max-width: 300px;
+}
+
+tr {
+
+}
+
+.table__delete {
+  position: absolute;
+  display: block;
+  padding: 2px 4px 3px 2px;
+  left: 0;
+  line-height: 1;
+  transform: translate(0, -50%);
+  color: white;
+  background: hsla(240, 20%, 50%, 0.2);
+  border-radius: 0 5px 5px 0;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.table__delete:focus {
+  outline: none;
+  background: hsl(240, 20%, 50%)
+}
+
+.table__row_body > .table__col_body:nth-child(odd) {
+  /* background: hsl(240, 20%, 80%); */
+}
+
+.faded .table__col_body {
+  color: rgb(143, 143, 143);
+}
+
+.panel__toggle-wrap {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.panel__toggle {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.toggle__name {
+  font-size: 12px;
+  line-height: 1;
+  color: rgb(165, 165, 165);
+
+}
+
+.toggle__label {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  margin: 0 4px;
+  border-radius: 25px;
+  border: 1px solid rgb(190, 190, 190);
+  cursor: pointer;
+}
+
+.toggle__input {
+
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.toggle__slider {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  top: 1px;
+  left: 1px;
+  border-radius: 50%;
+  background: hsl(240, 30%, 80%);
+}
+
+.toggle__input:checked + .toggle__slider {
+  left: 38px;
+  transform: translateX(-100%);
+}
+
+.toggle__input:focus ~ .toggle__slider {
+  background: hsl(240, 90%, 70%);
+}
+
+@media (max-width: 900px) {
+
+  .form__submit {
+    font-size: 18px;
+  }
+
+  .panel__filter {
+    font-size: 16px;
+  }
+
+  .panel__sort {
+    font-size: 16px;
+  }
+
+  .table__col_body {
+    font-size: 16px;
+  }
+
+  .toggle__name {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .form__submit {
+    font-size: 16px;
+  }
+
+  .panel__filter {
+    font-size: 12px;
+  }
+
+  .panel__sort {
+    font-size: 12px;
+  }
+
+  .table__col_body {
+    font-size: 12px;
+  }
+
+  .toggle__name {
+    font-size: 12px;
+  }
+
+  .panel__filter {
+    padding: 0;
+  }
+}

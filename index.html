@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/visuallyhidden.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="panel transparent">
+      <div class="panel__form">
+        <form action="" class="panel-form form">
+          <div class="panel-form form__inputs">
+            <div class="panel-form form__input-wrap">
+              <label for="name" class="panel-form form__input-label visuallyhidden">Name</label>
+              <input type="text" id="name" class="panel-form form__input" data-input="name" value="" placeholder="Name">
+              <!-- <span class="form__validation-tip">Too Short, Min Length = 2</span> -->
+            </div>
+            <div class="panel-form form__input-wrap">
+              <label for="surname" class="panel-form form__input-label visuallyhidden">Surname</label>
+              <input type="text" id="surname" class="panel-form form__input" data-input="name" value="" placeholder="Surname">
+            </div>
+            <div class="panel-form form__input-wrap">
+              <label for="patronym" class="panel-form form__input-label visuallyhidden">Patronym</label>
+              <input type="text" id="patronym" class="panel-form form__input" data-input="name" value="" placeholder="Patronym">
+            </div>
+            <div class="panel-form form__input-wrap form__input-wrap_date">
+              <label for="birthday" class="panel-form form__input-label visuallyhidden">Birthday</label>
+              <input type="date" id="birthday" class="panel-form form__input form__input_date" data-input="birthday" value="" placeholder="Birthday">
+              <span class="panel-form form__date-placeholder">Birthday</span>
+            </div>
+            <div class="panel-form form__input-wrap">
+              <label for="admission" class="panel-form form__input-label visuallyhidden">Admission</label>
+              <input type="text" id="admission" class="panel-form form__input" data-input="year" value="" placeholder="Admission">
+            </div>
+            <div class="panel-form form__input-wrap">
+              <label for="faculty" class="panel-form form__input-label visuallyhidden">Faculty</label>
+              <input type="text" id="faculty" class="panel-form form__input" data-input="text" value="" placeholder="Faculty">
+            </div>
+          </div>
+          <div class="form__submit-wrap">
+            <label for="submit" class="form__submit-label visuallyhidden">New Student</label>
+            <input type="submit" id="submit" class="form__submit" value="New Student">
+          </div>
+        </form>
+      </div>
+      <div class="panel__toggle-wrap">
+        <div class="panel-toggle panel__toggle">
+          <span class="panel-toggle toggle__name">Remove</span>
+          <label class="panel-toggle toggle__label">
+            <input type="checkbox" class="panel-toggle toggle__input" aria-label="Use spacebar to toggle. See or, in this case, hear more pro tips from the author of the code Yury Popchenya" >
+            <span class="panel-toggle toggle__slider"></span>
+          </label>
+          <span class="panel-toggle toggle__name">Fade</span>
+        </div>
+      </div>
+      <div class="panel__filters">
+        <div class="panel__filter-wrap panel__filter-wrap_name">
+          <label for="filterName" class="panel__filter-label visuallyhidden"></label>
+          <input type="text" id="filterName" class="panel__filter" data-filter="name" placeholder="Name">
+        </div>
+        <div class="panel__filter-wrap panel__filter-wrap_faculty">
+          <label for="filterFaculty" class="panel__filter-label visuallyhidden"></label>
+          <input type="text" id="filterFaculty" class="panel__filter" data-filter="faculty" placeholder="Faculty">
+        </div>
+        <div class="panel__filter-wrap panel__filter-wrap_admission">
+          <label for="filterAdmission" class="panel__filter-label visuallyhidden"></label>
+          <input type="text" id="filterAdmission" class="panel__filter" data-filter="admission" placeholder="Admission">
+        </div>
+        <div class="panel__filter-wrap panel__filter-wrap_graduation">
+          <label for="filterGraduation" class="panel__filter-label visuallyhidden"></label>
+          <input type="text" id="filterGraduation" class="panel__filter" data-filter="graduation" placeholder="Graduation">
+        </div>
+      </div>
+      <div class="panel__table-wrap">
+        <table class="panel__table table">
+          <thead class="panel-table table__head">
+            <tr class="panel-table table__row table__row_head">
+              <td class="panel-table table__col table__col_head panel__sort" tabindex="0" aria-label="Sort by Name" data-sort="0">Name</td>
+              <td class="panel-table table__col table__col_head panel__sort" tabindex="0" aria-label="Sort by Faculty" data-sort="1">Faculty</td>
+              <td class="panel-table table__col table__col_head panel__sort" tabindex="0" aria-label="Sort by Birthday" data-sort="2">Birthday</td>
+              <td class="panel-table table__col table__col_head panel__sort" tabindex="0" aria-label="Sort by Admission" data-sort="3">Study</td>
+            </tr>
+          </thead>
+          <tbody class="panel-table table__body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
